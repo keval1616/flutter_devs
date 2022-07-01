@@ -65,19 +65,54 @@ class _Image_pickerState extends State<Image_picker> {
         backgroundColor: Colors.orangeAccent,
       ),
       body:
-        Center(
-          child: ElevatedButton(
-            child: Text('Button'),
-            onPressed: () async{
-             await getCameraImage();
-            },
-            style: ButtonStyle(
-                backgroundColor: MaterialStateProperty.all(Colors.red),
-                padding: MaterialStateProperty.all(EdgeInsets.all(20)),
-                textStyle: MaterialStateProperty.all(TextStyle(fontSize: 19))),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Container(
+              width: 200,
+              height: 180,
+              color: Colors.orangeAccent,
+              child: (_image != null)
+                  ? Image.file(
+                _image!,
+                height: 200,
+                width: 180,
+                fit: BoxFit.fill,
+              ) :Image.asset("assets/empty.jpeg",fit: BoxFit.cover,),
+
+            ),
+            SizedBox(height: 20,),
+
+            Center(
+              child: ElevatedButton(
+                child: Text('pick Camera'),
+                onPressed: () async{
+                  getCameraImage();
+                },
+                style: ButtonStyle(
+                    backgroundColor: MaterialStateProperty.all(Colors.red),
+                    padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                    textStyle: MaterialStateProperty.all(TextStyle(fontSize: 19))),
 
       ),
+
+
+            ),
+            SizedBox(height: 20,),
+            ElevatedButton(
+              child: Text('pick Gallery'),
+              onPressed: () async{
+                getGalleryImage();
+              },
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.red),
+                  padding: MaterialStateProperty.all(EdgeInsets.all(20)),
+                  textStyle: MaterialStateProperty.all(TextStyle(fontSize: 19))),
+
+            ),
+          ],
         ),
+
     );
   }
 }

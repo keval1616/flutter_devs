@@ -43,7 +43,9 @@ class _Home_PageState extends State<Home_Page> {
             ),
             SizedBox(height: 20,),
             InkWell(
-              onTap : (){},
+              onTap : (){
+                Navigator.pushNamed(context, '/HomePage');
+              },
               child: Container(
                 width: 330,
                 height: 50,
