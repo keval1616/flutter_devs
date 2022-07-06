@@ -42,6 +42,7 @@ dependencies:
   snapshot: ^0.2.5
   firebase_core: ^1.18.0
   carousel_slider: ^4.1.1
+  flutter_local_notifications: ^9.6.1
 
 
 

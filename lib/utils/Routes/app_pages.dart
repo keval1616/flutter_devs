@@ -6,6 +6,7 @@
 import 'package:get/get.dart';
 
 import '../../Image_picker/image_picker.dart';
+import '../../Local_Notification.dart';
 import '../../firebase/pages/add_student_page.dart';
 import '../../firebase/pages/home_page.dart';
 import '../../firebase/pages/list_student_page.dart';
@@ -25,6 +26,7 @@ class AppPages{
     GetPage(name: Routes.addStudentPage, page: () => AddStudentPage(),),
     GetPage(name: Routes.listStudentPage, page: () => ListStudentPage(),),
     GetPage(name: Routes.updateStudentPage, page: () => UpdateStudentPage(id: '',),),
+    GetPage(name: Routes.local_Notification, page: () => Local_Notification(),),
 
 
 

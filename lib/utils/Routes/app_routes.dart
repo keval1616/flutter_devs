@@ -16,6 +16,7 @@ abstract class Routes{
   static const addStudentPage = '/AddStudentPage';
   static const listStudentPage = '/ListStudentPage';
   static const updateStudentPage = '/UpdateStudentPage';
+  static const local_Notification = '/Local_Notification';
 
 
 
